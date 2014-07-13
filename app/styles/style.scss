@@ -1,0 +1,184 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* Space out content a bit */
+html, body {
+}
+body {
+  /*background-color: #059164;*/
+  background-color: #F7F7F7;
+  font-family: 'Montserrat', sans-serif;
+}
+video {
+  display: block;
+}
+
+.exam-dash {
+  background-color: white;
+  margin: 10px auto;
+  width: 100%;
+  padding: 10px;
+  img {
+    width: 250px;
+  }
+}
+
+.outer-container {
+  width: 923px;
+  margin: 0 auto;
+}
+
+.room-container {
+  margin: 0 auto;
+  /*background-color: #0A5F44;*/
+  background-color: #E9E9E9;
+  overflow: auto
+}
+
+.empty-video {
+  /*background-color: #40B08C;*/
+  background-color: #D3D3D3;
+  width: 100%;
+}
+
+.video-title {
+  background-color: #FAFCFB;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  &.proctor {
+    border-left: 8px solid crimson;
+  }
+  &.student {
+    border-left: 8px solid #40B08C;
+  }
+}
+
+.proctor-feed-container {
+  float: left;
+  margin: 10px;
+  width: 400px;
+}
+
+.student-feed-container {
+  float: left;
+  margin: 10px;
+  width: 159px;
+}
+
+.mobile-feed-container {
+  margin-top: 10px;
+}
+
+#proctor-feed {
+  min-height: 300px;
+}
+
+#mobile-feed, #webcam-feed {
+  min-height: 119px;
+}
+
+  
+/* Chatbox */
+
+.chat-container {
+  float: left;
+  width: 300px;
+  min-height: 352px;
+  margin: 10px;
+  position: relative;
+}
+
+.chat-textarea {
+  border: none;
+  resize: none;
+  height: 236px;
+  padding: 12px 6px;
+  overflow: auto;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Progress Exam Time */
+
+#progressBar {
+  width: 100%;
+  margin: 10px auto;
+  color: black;
+  line-height: 25px;
+  height: 25px;
+  /*background-color: #f5f5f5;*/
+  background-color: #EBEBEB;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+ 
+#progressBar div {
+  height: 100%;
+  text-align: right;
+  color: white;
+  padding: 0 10px;
+  line-height: 25px; /* same as #progressBar height if we want text middle aligned */
+  width: 923px;
+  background-color: #5cb85c;
+  transition: width 0.6s ease;
+}
+
+.share-screen {
+  background: white;
+  padding: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.chat {
+  background-color: #F6F8F9;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  clear: both;
+  &.proctor {
+    background-color: #FCC9CB;
+    color: black;
+    float: left;
+  }
+}
+
+@media (min-width: 1250px) {
+  .outer-container {
+    width: 1219px;
+  }
+  .proctor-feed-container {
+    width: 600px;
+  }
+  #proctor-feed {
+    min-height: 450px;
+  }
+  .student-feed-container {
+    width: 259px;
+  }
+  #mobile-feed, #webcam-feed {
+    min-height: 194px;
+  }
+  .chat-container {
+    min-height: 502px;
+    height: 502px;
+  }
+  .chat-textarea {
+    height: 386px;
+  }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Exam Room</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div class="outer-container">
+            <div class="exam-dash">
+                <img src="../images/logo_uva.jpg" />
+            </div>
+        <div class="room-container">
+            <div class="proctor-feed-container">
+              <span class="video-title proctor">Proctor</span>
+              <video autoplay="true" class="empty-video" id="proctor-feed"></video>
+            </div>
+            <div class="student-feed-container">
+                <div class="small webcam-feed-container">
+                    <span class="video-title student">Web Cam</span>
+                    <video autoplay="true"  class="empty-video" id="webcam-feed">
+                    </video>
+                </div>
+                <div class="small mobile-feed-container">
+                    <span class="video-title student">Mobile Cam</span>
+                    <video autoplay="true"  class="empty-video" id="mobile-feed"></video>
+                </div>
+            </div>
+            <div class="chat-container">
+                <span class="video-title student">Chat</span>
+                <div class="chat-textarea form-control">
+                    <span class="chat student">Me: Hello Proctor</span></br>
+                    <span class="chat proctor">Proctor: Hello Mohamed</span></br>
+                    <span class="chat proctor">Proctor: Here is the <a href="http://www.independent.co.uk/sport/football/worldcup/brazil-vs-germany-world-cup-2014-memes-and-twitter-reaction-after-brazil-suffer-shocking-71-defeat-9593263.html">link</a> to your exam.</span></br>
+                    <span class="chat student">Me: I wanted to know if it is possible to go to the toilet? I need to take a dump?</span></br>
+                    <span class="chat proctor">Proctor: Dude are you serious?</span></br>
+                    <span class="chat student">Me: Uhm, dude yeah</span></br>
+                    <span class="chat student">Me: Hello Proctor</span></br>
+                    <span class="chat student">Me: Hello Proctor</span></br>
+                    <span class="chat student">Me: Hello Proctor</span></br>
+                </div>
+                <input class="chat-input form-control"/>
+            </div>
+        </div><!--Room Container -->
+        <div class="share-screen hide">
+            <span>Hello Mate, can you please 
+            </span>
+                <button class="btn btn-primary">Share Screen</button>
+        </div>
+        <div id="progressBar">
+            <div></div>
+        </div>
+        </div>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/exam.js"></script>
+        <script src="scripts/bootstrap-progressbar.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

@@ -1,0 +1,85 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* Space out content a bit */
+html, body {
+    height: 100%;
+}
+body {
+  background-color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.questions-container {
+  width: 80%;
+  margin: 10px auto;
+  height: 80%;
+  overflow: auto;
+}
+
+.chat-container {
+  width: 80%;
+  height: 80%;
+  margin: 10px auto;
+}
+
+.chat-textarea {
+  border: none;
+  resize: none;
+  height: 65%;
+  width: 75%;
+  overflow: auto;
+  float: left;
+  padding: 10px;
+}
+
+.chat-menu {
+  background-color: #2E6999;
+  float: right;
+  width: 25%;
+  height: 65%;
+  padding: 10px;
+  color: white;
+  border-radius:0 10px 10px 0;
+  overflow-y: auto;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: #3E506B;
+  cursor: pointer;
+}
+
+.table tbody tr td {
+  vertical-align: middle;
+  border: none;
+}
+
+.round {
+  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: #1B1B1B;
+  text-align: center;
+  padding: 3px;
+  display: block;
+}
+
+.chat-input {
+  margin-top: 30px;
+}
+
+.chat {
+  padding: 6px;
+  background-color: #9ED6FC;
+  margin: 0 0 10px 0;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.student {
+  background-color: crimson;
+  color: white;
+}

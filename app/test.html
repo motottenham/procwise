@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Proctor Room</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <body>
+        <div class="outer-wrapper">
+            <div class="logo-wrapper">
+                <h1>Logo</h1>
+            </div>
+            <div class="header">
+                <h1>Let's test your system's compatibility</h1>
+                <button class="btn btn-dark start-test">START TEST</button>
+            </div>
+            <div class="checklist-row">
+                <div class="check-col" id="check-screen">
+                    <img src="../images/screen.png" /></br>
+                    <span>screen sharing</span>
+                    <div class="check" id="screen-check"><img id="screen-status" src="../images/tick.png"/></div>
+                </div>
+                <div class="check-col">
+                    <img src="../images/mic.png" /></br>
+                    <span>microphone</span>
+                    <div class="check" id="mic-check"><img id="mic-status" src="../images/tick.png"/></div>
+                </div>
+                <div class="check-col">
+                    <img src="../images/speaker.png" /></br>
+                    <span>speakers</span>
+                    <div class="check" id="speaker-check"><img id="speaker-status" src="../images/tick.png"/></div>
+                </div>
+                <div class="check-col">
+                    <img src="../images/webcam.png"/></br>
+                    <span>web camera</span>
+                    <div class="check" id="webcam-check"><img id="webcam-status" src="../images/tick.png"/></div>
+                </div>
+                <div class="check-col" id="mobile-check">
+                    <img src="../images/mobile.png" /></br>
+                    <span>mobile</span>
+                    <div class="check"><img id="mobile-status" src="../images/cross.png"/></div>
+                </div>
+            </div>
+            <div class="test-wrapper">
+                <div class="test-instructions">
+                    <h1>Test Instructions</h1>
+                    <p>When the test starts we will need you to give us access to your camera and microphone. That's it, you can sit back and relax! We got it from here. The test will take less than a minute.</p>
+                </div>
+                <div class="test-notes">
+                    <h1>Notes</h1>
+                    <p>For the screen sharing part we need you to change a setting. Please follow the next steps.</p>
+                    <ul class="list-group">
+                    <li><span class="badge">1</span>chrome://flags</li>
+                    <li><span class="badge">2</span>bla vla</li>
+                    <li><span class="badge">3</span>relaunch now</li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+                <button class="btn btn-dark real-start-test">Start Test</button>
+            </div>
+        </div>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="scripts/test.js"></script>
+    </body>
+</html>
