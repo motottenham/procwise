@@ -4535,12 +4535,14 @@ body {
   background-color: white;
   padding: 50px;
   color: black;
-  overflow: auto; }
+  overflow: auto;
+  margin: 50px auto;
+  border: 1px solid #ddd; }
   .test-wrapper .test-instructions {
     width: 45%;
     float: left; }
   .test-wrapper .test-notes {
-    margin-left: 20px;
+    margin-left: 10%;
     width: 45%;
     float: left; }
     .test-wrapper .test-notes .list-group {
@@ -4572,7 +4574,12 @@ body {
   .checklist-row {
     padding: 30px 30px; }
   .check img {
-    width: 50%; } }
+    width: 50%; }
+  .test-wrapper {
+    width: 900px; }
+  .real-start-test {
+    padding: 9px 25px;
+    font-size: 16px; } }
 
 @media (min-width: 1330px) {
   .outer-wrapper {
@@ -4587,4 +4594,9 @@ body {
   .checklist-row {
     padding: 30px 30px; }
   .check img {
-    width: 100%; } }
+    width: 100%; }
+  .test-wrapper {
+    width: 1000px; }
+  .real-start-test {
+    padding: 12px 50px;
+    font-size: 18px; } }
