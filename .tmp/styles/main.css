@@ -4480,7 +4480,7 @@ body {
   font-family: 'ralewayregular'; }
 
 .outer-wrapper {
-  width: 820px;
+  width: 900px;
   margin: 10px auto; }
 
 
@@ -4488,14 +4488,14 @@ body {
   text-align: center;
   margin-bottom: 30px;
   font-family: 'ralewaylight'; }
-  .header .btn-dark {
+  .header .btn-main {
     background-color: #5C5B5B;
     color: white;
     padding: 6px 32px;
     border-radius: 10px;
     font-family: 'ralewaybold'; }
 
-.checklist-row {
+.checklist-row, .test-progress {
   background-color: #1da49e;
   color: white;
   text-align: center;
@@ -4531,19 +4531,21 @@ body {
     float: right; }
 
 .test-wrapper {
-  display: none;
   background-color: white;
-  padding: 50px;
+  border: 1px solid #ddd;
   color: black;
-  overflow: auto;
-  margin: 50px auto;
-  border: 1px solid #ddd; }
+  display: none;
+  height: 450px;
+  margin: 50px auto 0 auto;
+  padding: 50px;
+  position: relative;
+  overflow: auto; }
   .test-wrapper .test-instructions {
-    width: 45%;
+    width: 35%;
     float: left; }
   .test-wrapper .test-notes {
     margin-left: 10%;
-    width: 45%;
+    width: 55%;
     float: left; }
     .test-wrapper .test-notes .list-group {
       list-style: none; }
@@ -4555,10 +4557,30 @@ body {
       padding: 5px 10px;
       border-radius: 15px;
       margin-right: 5px; }
+  .test-wrapper .test-bottom {
+    float: left;
+    bottom: 50px;
+    position: absolute; }
 
-.real-start-test {
+.test-progress {
+  background-color: #1da49e;
+  display: none;
+  padding: 30px 0;
+  overflow: auto; }
+  .test-progress .inner {
+    width: 800px;
+    margin: 0 auto; }
+
+.btn-test {
   background-color: #1da49e;
   color: white; }
+
+.screen-feed {
+  width: 400px;
+  height: 225px;
+  background-color: crimson;
+  margin-top: 28px;
+  float: right; }
 
 @media (min-width: 1060px) {
   .outer-wrapper {
@@ -4577,7 +4599,7 @@ body {
     width: 50%; }
   .test-wrapper {
     width: 900px; }
-  .real-start-test {
+  .btn-test {
     padding: 9px 25px;
     font-size: 16px; } }
 
@@ -4597,6 +4619,9 @@ body {
     width: 100%; }
   .test-wrapper {
     width: 1000px; }
-  .real-start-test {
+  .btn-test {
     padding: 12px 50px;
-    font-size: 18px; } }
+    font-size: 18px; }
+  .screen-feed {
+    width: 444px;
+    height: 250px; } }
