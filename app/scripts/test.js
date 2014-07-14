@@ -1,24 +1,46 @@
 $(document).ready(function () { 
-  $('.start-test').click(function () {
-    $('.logo-wrapper').toggle();
-    $('.header').toggle();
-    $('.checklist-row').toggle();
-    $('.test-wrapper').toggle();
+  $('.btn-start-test').click(function () {
+        $('.logo-wrapper').toggle();
+        $('.header').toggle();
+        $('.checklist-row').toggle();
+        $('.test-wrapper').toggle();
     });
-  $('#start-test').click(function () {
-    $(this).toggleClass("hide");
-    $('#screen-notworking').toggleClass("hide");
-    $('.test-notes').empty().append('<div class="screen-feed"></div>');
-    $('.test-title').text("Screen sharing");
-    $('.test-description').text("Let's check if we can see your screen.");
-    $('.test-progress').show();
+  $('#intro-next').click(function () {
+        $('#step-intro').toggleClass("hide");
+        $('#step-screen').toggleClass("hide");
+        $('.test-progress').show();
     });
-   $('#screen-notworking').click(function () {
-    $(this).toggleClass("hide");
-    $('#mic-notworking').toggleClass("hide");
-    $('#screen-check').toggleClass("hide");
-    $('.test-notes').empty().append('<h1>Say Something</h1>');
-    $('.test-title').text("Microphone");
-    $('.test-description').text("Let's check if your microphone works.");
+   $('#screen-next').click(function () {
+        $('#step-screen').toggleClass("hide");
+        $('#step-mic').toggleClass("hide");
+        $('#screen-status').toggleClass("hide");
+    });
+    $('#btn-mic-issues').click(function () {
+        $('#step-mic').toggleClass("hide");
+        $('#step-speakers').toggleClass("hide");
+        $('#mic-status').toggleClass("hide");
+    });
+    $('#btn-canhear').click(function () {
+        $('#step-cams').toggleClass("hide");
+        $('#step-speakers').toggleClass("hide");
+        $('#mic-status').toggleClass("hide");
+    });
+    $('#btn-webcam-issues').click(function () {
+        $('.test-mobile-col').toggleClass("hide");
+        $('#cams-title').text("Mobile Cam");
+        $('#webcam-step-col').toggleClass("hide");
+        $('#btn-webcam-issues').toggleClass("hide");
+        $('#mobile-step-col').toggleClass("hide");
+    });
+    $('#btn-skip-test').click(function () {
+        $('#cams-title').text("Test Success");
+        $('#mobile-step-col').toggleClass("hide");
+        $('#btn-mobile-issues').toggleClass("hide");
+        $('#end-step').toggleClass("hide");
+    });
+    $('#end-test').click(function () {
+        $('#step-cams').toggleClass("hide");
+        $('#screen-instructions').toggleClass("hide");
+        $('.test-wrapper').addClass("screen-instructions");
     });
 });

@@ -18,53 +18,150 @@
             </div>
             <div class="header">
                 <h1>Let's test your system's compatibility</h1>
-                <button class="btn btn-main start-test">START TEST</button>
+                <button class="btn btn-main btn-start-test">START TEST</button>
             </div>
             <div class="checklist-row">
                 <div class="check-col" id="check-screen">
                     <img src="../images/screen.png" /></br>
                     <span>screen sharing</span>
-                    <div class="check"><img id="screen-status" src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-screen-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-screen-cross"><img src="../images/cross.png"/></div>
                 </div>
                 <div class="check-col">
                     <img src="../images/mic.png" /></br>
                     <span>microphone</span>
-                    <div class="check" id="mic-check"><img id="mic-status" src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-mic-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-mic-cross"><img src="../images/cross.png"/></div>
                 </div>
                 <div class="check-col">
                     <img src="../images/speaker.png" /></br>
                     <span>speakers</span>
-                    <div class="check" id="speaker-check"><img id="speaker-status" src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-speaker-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-speaker-cross"><img src="../images/cross.png"/></div>
                 </div>
                 <div class="check-col">
                     <img src="../images/webcam.png"/></br>
                     <span>web camera</span>
-                    <div class="check" id="webcam-check"><img id="webcam-status" src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-webcam-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-webcam-check"><img src="../images/cross.png"/></div>
                 </div>
                 <div class="check-col" id="mobile-check">
                     <img src="../images/mobile.png" /></br>
                     <span>mobile</span>
-                    <div class="check"><img id="mobile-status" src="../images/cross.png"/></div>
+                    <div class="check hide" id="home-mobile-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="home-mobile-cross"><img src="../images/cross.png"/></div>
                 </div>
             </div>
             <div class="test-wrapper">
-                <div class="test-instructions">
+                <div id="step-intro">
                     <h1 class="test-title">Test Instructions</h1>
-                    <p class="test-description">When the test starts we will need you to give us access to your camera and microphone. That's it, you can sit back and relax! We got it from here. The test will take less than a minute.</p>
-                <div class="test-bottom">
-                    <button class="btn btn-main btn-test" id="start-test">Start Test</button>
-                    <button class="btn btn-main btn-test hide" id="screen-notworking">Not working?</button>
-                    <button class="btn btn-main btn-test hide" id="mic-notworking">Not working?</button>
+                    <p class="test-description" id="intro-descr">When the test starts we will need you to give us access to your camera and microphone. That's it, you can sit back and relax! We got it from here. The test will take less than a minute.</p>
+                    <div class="test-bottom">
+                        <button class="btn btn-amar" id="intro-next">START TEST</button>
+                    </div>
                 </div>
+                <div id="step-screen" class="hide">
+                        <h1 class="test-title">Screen Sharing</h1>
+                    <div class="screen-col">
+                        <p class="test-description">When the test starts we will need you to give us access to your camera and microphone. That's it, you can sit back and relax! We got it from here. The test will take less than a minute.</p>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-instructions">INSTRUCTIONS</button>
+                            <button class="btn btn-amar" id="intro-next">ALREADY ENABLED</button>
+                        </div>
+                    </div>
+                    <div class="screen-col" id="screen-col-2">
+                        <p class="test-description">Please make sure to click 'yes' in the alert box after clicking on "start screen sharing".</p>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="intro-next">START SCREEN SHARING</button>
+                        </div>
+                    </div>
+                    <div class="screen-col" id="screen-col-3">
+                        <div class="screen-feed">    
+                        </div>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="screen-next">NEXT</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="test-notes">
-                    <h1>Note</h1>
-                    <p>For the screen sharing part we need you to change a setting. Please follow the next steps.</p>
-                    <ul class="list-group">
-                    <li><span class="badge">1</span>chrome://flags</li>
-                    <li><span class="badge">2</span>bla vla</li>
-                    <li><span class="badge">3</span>Your changes will take effect the next time you relaunch Google Chrome</li>
-                    </ul>
+                <div id="step-mic" class="hide">
+                    <h1 class="test-title">Microphone</h1>
+                    <div class="screen-col">
+                        <p class="test-description">Please allow your microphone.</p>
+                        <img src="../images/allow-deny.jpg"/>
+                    </div>
+                    <div class="screen-col" id="screen-col-2">
+                        <p class="test-description">Make some noise</p>
+                        <canvas id="mic-meter"></canvas>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-mic-issues">MIC ISSUES?</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="step-speakers" class="hide">
+                    <h1 class="test-title">Speakers</h1>
+                    <div class="screen-col">
+                        <p class="test-description">Your microphone works. Let's test your speakers now. You'll be hearing some music shortly.</p>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-canhear">I CAN HEAR IT</button>
+                            <button class="btn btn-amar" id="btn-nohear">HEAR NOTHING?</button>
+                        </div>
+                    </div>
+                    <div class="screen-col" id="screen-col-2">
+                        <p class="test-description">Make some noise</p>
+                        <canvas id="mic-meter"></canvas>
+                    </div>
+                </div>
+                <div id="step-cams" class="hide">
+                    <h1 class="test-title" id="cams-title">Desktop webcam</h1>
+                    <div class="screen-col" id="webcam-step-col">
+                        <p class="test-description">Please allow your webcam.</p>
+                        <img src="../images/allow-deny.jpg"/>
+                    </div>
+                    <div class="screen-col hide" id="mobile-step-col">
+                        <p class="test-description">Time to check your mobile cam. Please enter the pincode into the Procwise mobile app.</p>
+                        <div class="test-bottom">
+                            <p class="test-description">Please skip this step if you are using an Iphone or an Ipad.</p>
+                            <button class="btn btn-amar" id="btn-skip-test">SKIP</button>
+                        </div>
+                    </div>
+                    <div class="screen-col hide" id="end-step">
+                        <p class="test-description">Play around with your mobile camera and see where you can put it. Your mobile camera should be placed behind you.</p>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="end-test">SEND ME MY EXAM LINK</button>
+                        </div>
+                    </div>
+                    <div class="screen-col" id="screen-col-2">
+                        <p class="test-description">Web Cam</p>
+                        <div class="webcam-feed"></div>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-webcam-issues">WEBCAM ISSUES?</button>
+                        </div>
+                    </div>
+                    <div class="screen-col test-mobile-col hide" id="screen-col-3">
+                        <p class="test-description">Mobile Cam</p>
+                        <div class="webcam-feed"></div>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-mobile-issues">MOBILE CAM ISSUES?</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Screen Sharing Instruction at the bottom so that code is easy to follow !-->
+                <div id="screen-instructions" class="hide">
+                        <h1 class="test-title">Screen Sharing Instructions</h1>
+                    <div class="screen-col" id="screen-list-wrapper">
+                        <ul class="list-group">
+                            <li><span class="badge">1</span><span><h2>chrome://flags/#enable-usermedia-screen-capture</h2></span></li>
+                            <li><span class="badge">2</span><span><h2>Enable screen capturing</h2></li>
+                            </span>
+                            <li><span class="badge">3</span><span><h2>Relaunch your browser</h2></span></li>
+                        </ul>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar" id="btn-instructions">CLOSE INSTRUCTIONS</button>
+                        </div>
+                    </div>
+                    <div class="screen-col" id="screen-col-2">
+                        <img src="../images/allow-deny.jpg"/>
+                    </div>
                 </div>
             </div>
             <div class="test-progress">
@@ -72,27 +169,32 @@
                     <div class="check-col" id="check-screen">
                         <img src="../images/screen.png" /></br>
                         <span>screen sharing</span>
-                        <div class="check hide" id="screen-check"><img id="screen-status" src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-screen-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="progress-screen-cross"><img src="../images/cross.png"/></div>
                     </div>
-                    <div class="check-col">
+                    <div class="check-col" id="mic-col">
                         <img src="../images/mic.png" /></br>
                         <span>microphone</span>
-                        <div class="check hide" id="mic-check"><img id="mic-status" src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-mic-check"><img src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-mic-cross"><img src="../images/cross.png"/></div>
                     </div>
                     <div class="check-col">
                         <img src="../images/speaker.png" /></br>
                         <span>speakers</span>
-                        <div class="check hide" id="speaker-check"><img id="speaker-status" src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-speaker-check"><img src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-speaker-cross"><img src="../images/cross.png"/></div>
                     </div>
                     <div class="check-col">
                         <img src="../images/webcam.png"/></br>
                         <span>web camera</span>
-                        <div class="check hide" id="webcam-check"><img id="webcam-status" src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-webcam-check"><img src="../images/tick.png"/></div>
+                        <div class="check hide" id="progress-webcam-check"><img src="../images/cross.png"/></div>
                     </div>
                     <div class="check-col" id="mobile-check">
                         <img src="../images/mobile.png" /></br>
                         <span>mobile</span>
-                        <div class="check hide"><img id="mobile-status" src="../images/cross.png"/></div>
+                        <div class="check hide" id="progress-mobile-check"><img src="../images/tick.png"/></div>
+                    <div class="check hide" id="progress-mobile-cross"><img src="../images/cross.png"/></div>
                     </div>
                 </div>
             </div>
