@@ -4603,12 +4603,26 @@ span.badge {
   .test-progress .inner {
     margin: 0 auto; }
 
-#btn-instructions {
+.btn-yellow {
   background-color: yellow;
   color: #74570c; }
 
 #intro-descr {
   width: 50%; }
+
+#error-list-wrapper {
+  width: 100%; }
+
+.error-list {
+  border-bottom: 1px solid white;
+  height: 50px;
+  font-family: 'ralewaylight'; }
+
+.error-input {
+  background-color: #0D6373;
+  width: 100%;
+  height: 240px !important;
+  color: white; }
 
 .screen-col {
   width: 30%;

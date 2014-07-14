@@ -65,7 +65,7 @@
                     <div class="screen-col">
                         <p class="test-description">When the test starts we will need you to give us access to your camera and microphone. That's it, you can sit back and relax! We got it from here. The test will take less than a minute.</p>
                         <div class="test-bottom">
-                            <button class="btn btn-amar" id="btn-instructions">INSTRUCTIONS</button>
+                            <button class="btn btn-amar btn-yellow" id="btn-instructions">INSTRUCTIONS</button>
                             <button class="btn btn-amar" id="intro-next">ALREADY ENABLED</button>
                         </div>
                     </div>
@@ -156,13 +156,35 @@
                             <li><span class="badge">3</span><span><h2>Relaunch your browser</h2></span></li>
                         </ul>
                         <div class="test-bottom">
-                            <button class="btn btn-amar" id="btn-instructions">CLOSE INSTRUCTIONS</button>
+                            <button class="btn btn-amar btn-yellow" id="btn-xinstructions">CLOSE INSTRUCTIONS</button>
                         </div>
                     </div>
                     <div class="screen-col" id="screen-col-2">
                         <img src="../images/allow-deny.jpg"/>
                     </div>
                 </div>
+                <!-- Screen Sharing Instruction at the bottom so that code is easy to follow !-->
+                <div id="test-fail" class="hide">
+                    <div class="screen-col errors" id="error-list-wrapper">
+                        <div class="error-list"><h2>Check your spam email box</h2></div>
+                        <div class="error-list"><h2>Make sure you're on an Android</h2></div>
+                        <div class="error-list"><h2>Check your internet connection</h2></div>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar btn-yellow" id="btn-testagain">TEST AGAIN</button>
+                            <button class="btn btn-amar btn-yellow" id="btn-contact">CONTACT US</button>
+                        </div>
+                    </div>
+                    <div class="screen-col contact hide" id="error-list-wrapper">
+                        <form>
+                            <textarea class="form-control error-input" type="text"></textarea>
+                        </form>
+                        <div class="test-bottom">
+                            <button class="btn btn-amar btn-yellow" id="btn-testagain">back</button>
+                            <button class="btn btn-amar btn-yellow" id="btn-contact">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="test-progress">
                 <div class="inner">

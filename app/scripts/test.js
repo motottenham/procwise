@@ -40,7 +40,11 @@ $(document).ready(function () {
     });
     $('#end-test').click(function () {
         $('#step-cams').toggleClass("hide");
-        $('#screen-instructions').toggleClass("hide");
+        $('#test-fail').toggleClass("hide");
         $('.test-wrapper').addClass("screen-instructions");
+    });
+    $('#btn-contact').click(function () {
+        $('.errors').toggleClass("hide");
+        $('.contact').toggleClass("hide");
     });
 });
